@@ -1,0 +1,37 @@
+@import "@/common.less";
+@backgroundCol:#fff;
+@activeCol:lightcoral;
+.pager{
+  height: 80px;
+  .flex-center();
+  margin-top: 20px;
+  span{
+    font-size: 14px;
+    .flex-center();
+    .boder-style(6px,#ccc);
+    background-color: @backgroundCol;
+    margin: 0 5px;
+    padding: 0 15px;
+    height: 40px;
+    user-select: none;
+    cursor: pointer;
+    .hover-style(15px);
+    &.disabled{
+      background-color: #eee;
+      color: #ccc;
+      cursor: not-allowed;
+      &:hover{
+        transform: none;
+        box-shadow: none;
+      }
+    }
+    &.active{
+      background-color: @activeCol;
+      cursor: auto;
+      &:hover{
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

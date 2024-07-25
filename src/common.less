@@ -1,0 +1,23 @@
+.abs-center(@type:absolute){
+  position: @type;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.flex-center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boder-style(@r:5px,@col:#eee){
+  border-radius: @r;
+  border: 1px solid @col;
+  box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.5);
+}
+.hover-style(@blur:25px,@offset:-5px,@col:rgba(0, 0, 0, 0.5)){
+  transition: 0.25s;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 @blur @offset @col;
+  }
+}

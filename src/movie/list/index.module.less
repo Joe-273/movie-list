@@ -1,0 +1,32 @@
+@import "@/common.less";
+@fontCol:#333;
+.container{
+  margin: 0 auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px 20px;
+  color: @fontCol;
+  font-size: 14px;
+  .item{
+    width: 180px;
+    text-align: center;
+    .boder-style(10px);
+    .hover-style();
+    p{
+      margin: 5px 0;
+    }
+    img{
+      margin-top: 15px;
+      height: 200px;
+      width: 150px;
+      object-fit: cover;
+      .boder-style(5px)
+    }
+    .rate{
+      color: #7be921;
+      margin-bottom: 10px;
+    }
+    
+  }
+}
